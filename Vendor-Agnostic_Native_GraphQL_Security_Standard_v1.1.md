@@ -37,6 +37,21 @@ The following topics are explicitly out of scope:
 
 This document focuses on how GraphQL **consumes and propagates** identity and data, not how those identities or data stores are managed at a lower layer.
 
+### Terminology Note
+
+This document adopts a **normalized terminology model** to describe GraphQL-specific security risks.
+
+Where possible:
+- Widely used industry or community terms (e.g., “Query Complexity DoS”, “Broken Access Control”) are referenced implicitly.
+- These are then mapped to **structural terms** used consistently throughout this document
+  (e.g., “Recursive Resource Exhaustion”, “Authorization Context Fragmentation”).
+
+This approach is intentional:
+the goal is not to introduce new vocabulary,
+but to describe recurring GraphQL security failures based on their **architectural root causes** rather than surface-level symptoms.
+
+A full terminology alignment table is provided in the Appendix.
+
 ---
 
 # 1. Threat Model & Risk Prioritization
